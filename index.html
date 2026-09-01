@@ -1,230 +1,313 @@
-<!--
-  ============================================================================
-  MODELE DU RAPPORT HEBDO RESEAUX SOCIAUX
-  ----------------------------------------------------------------------------
-  Ne modifie QUE le contenu situe entre les marqueurs "DEBUT ..." et "FIN ...".
-  Ne touche pas au bloc style ni au bloc svg id="sprite" : ils contiennent les
-  logos de toutes les plateformes, prets a l'emploi.
-
-  POUR AFFICHER UN LOGO, copie-colle le badge correspondant :
-    &lt;span class="mark mark-meta"&gt;&lt;svg class="mark-svg"&gt;&lt;use href="#ico-meta"/&gt;&lt;/svg&gt;&lt;/span&gt;Meta
-    &lt;span class="mark mark-youtube"&gt;&lt;svg class="mark-svg"&gt;&lt;use href="#ico-youtube"/&gt;&lt;/svg&gt;&lt;/span&gt;YouTube
-    &lt;span class="mark mark-tiktok"&gt;&lt;svg class="mark-svg"&gt;&lt;use href="#ico-tiktok"/&gt;&lt;/svg&gt;&lt;/span&gt;TikTok
-    &lt;span class="mark mark-snapchat"&gt;&lt;svg class="mark-svg"&gt;&lt;use href="#ico-snapchat"/&gt;&lt;/svg&gt;&lt;/span&gt;Snapchat
-    &lt;span class="mark mark-instagram"&gt;&lt;svg class="mark-svg"&gt;&lt;use href="#ico-instagram"/&gt;&lt;/svg&gt;&lt;/span&gt;Instagram
-    &lt;span class="mark mark-facebook"&gt;&lt;svg class="mark-svg"&gt;&lt;use href="#ico-facebook"/&gt;&lt;/svg&gt;&lt;/span&gt;Facebook
-    &lt;span class="mark mark-x"&gt;&lt;svg class="mark-svg"&gt;&lt;use href="#ico-x"/&gt;&lt;/svg&gt;&lt;/span&gt;X
-    &lt;span class="mark mark-threads"&gt;&lt;svg class="mark-svg"&gt;&lt;use href="#ico-threads"/&gt;&lt;/svg&gt;&lt;/span&gt;Threads
-    &lt;span class="mark mark-pinterest"&gt;&lt;svg class="mark-svg"&gt;&lt;use href="#ico-pinterest"/&gt;&lt;/svg&gt;&lt;/span&gt;Pinterest
-    &lt;span class="mark mark-linkedin"&gt;&lt;svg class="mark-svg"&gt;&lt;use href="#ico-linkedin"/&gt;&lt;/svg&gt;&lt;/span&gt;LinkedIn
-
-  Slugs disponibles : meta, youtube, tiktok, snapchat, instagram, facebook, x, threads, pinterest, linkedin
-  ============================================================================
--->
+<style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}</style></head><body>
 <style>
   :root{
-    --paper:#F3F2ED; --paper-raised:#FBFAF6;
-    --ink:#1B1B1E; --ink-soft:#5B5D63; --ink-faint:#8A8C8F;
-    --line:#DDD9CE; --accent:#2C4A7C; --accent-warm:#A85A2E;
+    --paper:#F3F2ED;
+    --paper-raised:#FBFAF6;
+    --ink:#1B1B1E;
+    --ink-soft:#5B5D63;
+    --ink-faint:#8A8C8F;
+    --line:#DDD9CE;
+    --accent:#2C4A7C;
+    --accent-warm:#A85A2E;
     --font-display: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
     --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     --font-mono: "SF Mono", "Menlo", "Consolas", monospace;
   }
   *{box-sizing:border-box;}
   body{margin:0;}
-  .report{ background:var(--paper); color:var(--ink); font-family:var(--font-body); line-height:1.55; }
-  .wrap{ max-width:920px; margin:0 auto; padding:56px 28px 80px; }
-
-  .masthead{ display:flex; flex-direction:column; gap:14px; padding-bottom:32px;
-    border-bottom:1px solid var(--line); margin-bottom:40px; }
-  .eyebrow{ font-family:var(--font-mono); font-size:11.5px; letter-spacing:0.14em;
-    text-transform:uppercase; color:var(--accent); font-weight:600; }
-  h1{ font-family:var(--font-display); font-size:clamp(28px, 4vw, 40px); line-height:1.15;
-    margin:0; text-wrap:balance; font-weight:400; letter-spacing:-0.01em; }
-  .masthead-meta{ display:flex; justify-content:space-between; align-items:baseline;
-    flex-wrap:wrap; gap:12px; font-size:14px; color:var(--ink-soft); }
-  .masthead-meta .range{ font-family:var(--font-mono); font-variant-numeric:tabular-nums; color:var(--ink); }
-  .lede{ max-width:62ch; color:var(--ink-soft); font-size:16px; }
+  .report{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--font-body);
+    line-height:1.55;
+    padding:0;
+  }
+  .wrap{
+    max-width:920px;
+    margin:0 auto;
+    padding:56px 28px 80px;
+  }
+  .masthead{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    padding-bottom:32px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:40px;
+  }
+  .eyebrow{
+    font-family:var(--font-mono);
+    font-size:11.5px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+    font-weight:600;
+  }
+  h1{
+    font-family:var(--font-display);
+    font-size:clamp(28px, 4vw, 40px);
+    line-height:1.15;
+    margin:0;
+    text-wrap:balance;
+    font-weight:400;
+    letter-spacing:-0.01em;
+  }
+  .masthead-meta{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    flex-wrap:wrap;
+    gap:12px;
+    font-size:14px;
+    color:var(--ink-soft);
+  }
+  .masthead-meta .range{
+    font-family:var(--font-mono);
+    font-variant-numeric:tabular-nums;
+    color:var(--ink);
+  }
+  .lede{
+    max-width:62ch;
+    color:var(--ink-soft);
+    font-size:16px;
+  }
 
   section{ margin-bottom:48px; }
-  .section-head{ display:flex; align-items:baseline; gap:10px; margin-bottom:20px; }
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    gap:10px;
+    margin-bottom:20px;
+  }
   .section-head .eyebrow{ color:var(--ink-faint); }
-  .section-head h2{ font-family:var(--font-display); font-size:21px; font-weight:400; margin:0; color:var(--ink); }
-  .section-head .rule{ flex:1; height:1px; background:var(--line); transform:translateY(1px); }
+  .section-head h2{
+    font-family:var(--font-display);
+    font-size:21px;
+    font-weight:400;
+    margin:0;
+    color:var(--ink);
+  }
+  .section-head .rule{
+    flex:1;
+    height:1px;
+    background:var(--line);
+    transform:translateY(1px);
+  }
 
-  .top3{ display:grid; grid-template-columns:repeat(3, 1fr); gap:1px; background:var(--line);
-    border:1px solid var(--line); margin-bottom:48px; }
-  .top3 .card{ background:var(--paper-raised); padding:22px 20px; display:flex; flex-direction:column; gap:10px; }
-  .top3 .rank{ font-family:var(--font-mono); font-size:11px; letter-spacing:0.1em;
-    color:var(--accent-warm); font-weight:700; display:flex; align-items:center; gap:8px; }
-  .top3 .card h3{ font-family:var(--font-display); font-size:17px; line-height:1.3; margin:0; font-weight:400; }
-  .top3 .card p{ font-size:14px; color:var(--ink-soft); margin:0; flex:1; }
-
-  .mark{ flex:0 0 auto; display:inline-flex; align-items:center; justify-content:center;
-    width:36px; height:36px; border-radius:50%; background:var(--paper-raised);
-    border:1px solid var(--line); box-shadow:0 1px 2px rgba(27,27,30,0.06); overflow:hidden; }
-  .mark-svg{ width:19px; height:19px; display:block; fill:currentColor; }
+  .top3{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    margin-bottom:48px;
+  }
+  .top3 .card{
+    background:var(--paper-raised);
+    padding:22px 20px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .top3 .rank{
+    font-family:var(--font-mono);
+    font-size:11px;
+    letter-spacing:0.1em;
+    color:var(--accent-warm);
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .mark{
+    flex:0 0 auto;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    background:var(--paper-raised);
+    border:1px solid var(--line);
+    box-shadow:0 1px 2px rgba(27,27,30,0.06);
+    color:var(--accent);
+    overflow:hidden;
+  }
+  .mark svg{ width:19px; height:19px; display:block; }
+  .mark img{ width:65%; height:65%; object-fit:contain; display:block; }
   .item .mark{ width:30px; height:30px; }
-  .item .mark-svg{ width:16px; height:16px; }
-  .mark-meta{ color:#0081FB; }
-  .mark-youtube{ color:#FF0000; }
-  .mark-tiktok{ color:#111111; }
-  .mark-snapchat{ color:#FFFC00; }
-  .mark-instagram{ color:#E4405F; }
-  .mark-facebook{ color:#0866FF; }
-  .mark-x{ color:#111111; }
-  .mark-threads{ color:#111111; }
-  .mark-pinterest{ color:#BD081C; }
-  .mark-linkedin{ color:#0A66C2; }
-  .mark-snapchat{ background:#FFFC00; border-color:#FFFC00; color:#ffffff; }
-  .mark-snapchat .mark-svg{ stroke:#000000; stroke-width:0.6px; stroke-linejoin:round; }
+  .item .mark svg{ width:16px; height:16px; }
 
-  .item{ display:flex; align-items:flex-start; gap:20px; padding:16px 0; border-bottom:1px solid var(--line); }
+  .photo{
+    margin:14px 0 6px;
+    border-radius:4px;
+    overflow:hidden;
+    border:1px solid var(--line);
+  }
+  .photo img{
+    display:block;
+    width:100%;
+    height:auto;
+    max-height:280px;
+    object-fit:cover;
+  }
+  .photo-cap{
+    font-family:var(--font-mono);
+    font-size:11px;
+    color:var(--ink-faint);
+    padding:6px 2px 0;
+  }
+  .photo-cap a{ color:var(--ink-faint); }
+  .stat-num{
+    font-family:var(--font-display);
+    font-size:34px;
+    line-height:1;
+    color:var(--accent);
+    font-variant-numeric:tabular-nums;
+    letter-spacing:-0.02em;
+  }
+  .stat-cap{
+    font-family:var(--font-mono);
+    font-size:10.5px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+  }
+  .top3 .card h3{
+    font-family:var(--font-display);
+    font-size:17px;
+    line-height:1.3;
+    margin:0;
+    font-weight:400;
+  }
+  .top3 .card p{
+    font-size:14px;
+    color:var(--ink-soft);
+    margin:0;
+    flex:1;
+  }
+
+  .item{
+    display:flex;
+    align-items:flex-start;
+    gap:20px;
+    padding:16px 0;
+    border-bottom:1px solid var(--line);
+  }
   .item:last-child{ border-bottom:none; }
-  .item .platform{ flex:0 0 118px; display:flex; align-items:center; gap:8px;
-    font-family:var(--font-mono); font-size:11px; letter-spacing:0.08em;
-    text-transform:uppercase; color:var(--accent); padding-top:2px; }
+  .item .platform{
+    flex:0 0 108px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-family:var(--font-mono);
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--accent);
+    padding-top:2px;
+  }
   .item .body{ flex:1; max-width:66ch; }
-  .item .body h4{ font-size:15.5px; font-weight:600; margin:0 0 4px; color:var(--ink); }
-  .item .body p{ font-size:14.5px; color:var(--ink-soft); margin:0 0 6px; }
-
-  .update-tag{ display:inline-block; font-family:var(--font-mono); font-size:10.5px;
-    letter-spacing:0.06em; text-transform:uppercase; color:var(--accent-warm);
-    border:1px solid var(--accent-warm); border-radius:2px; padding:1px 6px; margin-bottom:6px; }
-  .stat-num{ font-family:var(--font-display); font-size:34px; line-height:1; color:var(--accent);
-    font-variant-numeric:tabular-nums; letter-spacing:-0.02em; }
-  .stat-cap{ font-family:var(--font-mono); font-size:10.5px; letter-spacing:0.06em;
-    text-transform:uppercase; color:var(--ink-faint); }
-
-  .src{ font-family:var(--font-mono); font-size:12px; color:var(--accent);
-    text-decoration:none; border-bottom:1px solid transparent; }
+  .item .body h4{
+    font-size:15.5px;
+    font-weight:600;
+    margin:0 0 4px;
+    color:var(--ink);
+  }
+  .item .body p{
+    font-size:14.5px;
+    color:var(--ink-soft);
+    margin:0 0 6px;
+  }
+  .update-tag{
+    display:inline-block;
+    font-family:var(--font-mono);
+    font-size:10.5px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--accent-warm);
+    border:1px solid var(--accent-warm);
+    border-radius:2px;
+    padding:1px 6px;
+    margin-bottom:6px;
+  }
+  .src{
+    font-family:var(--font-mono);
+    font-size:12px;
+    color:var(--accent);
+    text-decoration:none;
+    border-bottom:1px solid transparent;
+  }
   .src:hover{ border-bottom-color:var(--accent); }
   .src:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
 
-  .callout{ background:var(--paper-raised); border:1px solid var(--line);
-    border-left:3px solid var(--accent-warm); padding:16px 20px; font-size:14.5px;
-    color:var(--ink-soft); margin-bottom:8px; }
+  .callout{
+    background:var(--paper-raised);
+    border:1px solid var(--line);
+    border-left:3px solid var(--accent-warm);
+    padding:16px 20px;
+    font-size:14.5px;
+    color:var(--ink-soft);
+    margin-bottom:8px;
+  }
   .callout strong{ color:var(--ink); }
 
-  .photo{ margin:14px 0 6px; border-radius:4px; overflow:hidden; border:1px solid var(--line); }
-  .photo img{ display:block; width:100%; height:auto; max-height:280px; object-fit:cover; }
-  .photo-cap{ font-family:var(--font-mono); font-size:11px; color:var(--ink-faint); padding:6px 2px 0; }
-  .photo-cap a{ color:var(--ink-faint); }
-
-  footer{ border-top:1px solid var(--line); padding-top:20px; font-size:12.5px;
-    color:var(--ink-faint); display:flex; justify-content:space-between;
-    flex-wrap:wrap; gap:8px; font-family:var(--font-mono); }
+  footer{
+    border-top:1px solid var(--line);
+    padding-top:20px;
+    font-size:12.5px;
+    color:var(--ink-faint);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:8px;
+    font-family:var(--font-mono);
+  }
 
   @media (max-width:700px){
     .top3{ grid-template-columns:1fr; }
     .item{ flex-direction:column; gap:4px; }
     .item .platform{ flex:none; }
   }
+  @media (prefers-reduced-motion:no-preference){
+    .item, .top3 .card{ transition:background-color .15s ease; }
+  }
 </style>
-
-<svg id="sprite" style="display:none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <defs>
-    <symbol id="ico-meta" viewBox="0 0 24 24"><path d="M6.915 4.03c-1.968 0-3.683 1.28-4.871 3.113C.704 9.208 0 11.883 0 14.449c0 .706.07 1.369.21 1.973a6.624 6.624 0 0 0 .265.86 5.297 5.297 0 0 0 .371.761c.696 1.159 1.818 1.927 3.593 1.927 1.497 0 2.633-.671 3.965-2.444.76-1.012 1.144-1.626 2.663-4.32l.756-1.339.186-.325c.061.1.121.196.183.3l2.152 3.595c.724 1.21 1.665 2.556 2.47 3.314 1.046.987 1.992 1.22 3.06 1.22 1.075 0 1.876-.355 2.455-.843a3.743 3.743 0 0 0 .81-.973c.542-.939.861-2.127.861-3.745 0-2.72-.681-5.357-2.084-7.45-1.282-1.912-2.957-2.93-4.716-2.93-1.047 0-2.088.467-3.053 1.308-.652.57-1.257 1.29-1.82 2.05-.69-.875-1.335-1.547-1.958-2.056-1.182-.966-2.315-1.303-3.454-1.303zm10.16 2.053c1.147 0 2.188.758 2.992 1.999 1.132 1.748 1.647 4.195 1.647 6.4 0 1.548-.368 2.9-1.839 2.9-.58 0-1.027-.23-1.664-1.004-.496-.601-1.343-1.878-2.832-4.358l-.617-1.028a44.908 44.908 0 0 0-1.255-1.98c.07-.109.141-.224.211-.327 1.12-1.667 2.118-2.602 3.358-2.602zm-10.201.553c1.265 0 2.058.791 2.675 1.446.307.327.737.871 1.234 1.579l-1.02 1.566c-.757 1.163-1.882 3.017-2.837 4.338-1.191 1.649-1.81 1.817-2.486 1.817-.524 0-1.038-.237-1.383-.794-.263-.426-.464-1.13-.464-2.046 0-2.221.63-4.535 1.66-6.088.454-.687.964-1.226 1.533-1.533a2.264 2.264 0 0 1 1.088-.285z"/></symbol>
-    <symbol id="ico-youtube" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></symbol>
-    <symbol id="ico-tiktok" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></symbol>
-    <symbol id="ico-snapchat" viewBox="0 0 24 24"><path d="M12.206.793c.99 0 4.347.276 5.93 3.821.529 1.193.403 3.219.299 4.847l-.003.06c-.012.18-.022.345-.03.51.075.045.203.09.401.09.3-.016.659-.12 1.033-.301.165-.088.344-.104.464-.104.182 0 .359.029.509.09.45.149.734.479.734.838.015.449-.39.839-1.213 1.168-.089.029-.209.075-.344.119-.45.135-1.139.36-1.333.81-.09.224-.061.524.12.868l.015.015c.06.136 1.526 3.475 4.791 4.014.255.044.435.27.42.509 0 .075-.015.149-.045.225-.24.569-1.273.988-3.146 1.271-.059.091-.12.375-.164.57-.029.179-.074.36-.134.553-.076.271-.27.405-.555.405h-.03c-.135 0-.313-.031-.538-.074-.36-.075-.765-.135-1.273-.135-.3 0-.599.015-.913.074-.6.104-1.123.464-1.723.884-.853.599-1.826 1.288-3.294 1.288-.06 0-.119-.015-.18-.015h-.149c-1.468 0-2.427-.675-3.279-1.288-.599-.42-1.107-.779-1.707-.884-.314-.045-.629-.074-.928-.074-.54 0-.958.089-1.272.149-.211.043-.391.074-.54.074-.374 0-.523-.224-.583-.42-.061-.192-.09-.389-.135-.567-.046-.181-.105-.494-.166-.57-1.918-.222-2.95-.642-3.189-1.226-.031-.063-.052-.15-.055-.225-.015-.243.165-.465.42-.509 3.264-.54 4.73-3.879 4.791-4.02l.016-.029c.18-.345.224-.645.119-.869-.195-.434-.884-.658-1.332-.809-.121-.029-.24-.074-.346-.119-1.107-.435-1.257-.93-1.197-1.273.09-.479.674-.793 1.168-.793.146 0 .27.029.383.074.42.194.789.3 1.104.3.234 0 .384-.06.465-.105l-.046-.569c-.098-1.626-.225-3.651.307-4.837C7.392 1.077 10.739.807 11.727.807l.419-.015h.06z"/></symbol>
-    <symbol id="ico-instagram" viewBox="0 0 24 24"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></symbol>
-    <symbol id="ico-facebook" viewBox="0 0 24 24"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></symbol>
-    <symbol id="ico-x" viewBox="0 0 24 24"><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></symbol>
-    <symbol id="ico-threads" viewBox="0 0 24 24"><path d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"/></symbol>
-    <symbol id="ico-pinterest" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></symbol>
-    <symbol id="ico-linkedin" viewBox="0 0 24 24"><rect x="1.5" y="1.5" width="21" height="21" rx="4"/><rect x="5" y="9.5" width="3" height="9.5" fill="#fff"/><circle cx="6.5" cy="6" r="1.9" fill="#fff"/><path d="M10.5 9.5h2.9v1.3a3.2 3.2 0 0 1 2.9-1.5c2.2 0 3.2 1.4 3.2 3.9V19h-3v-5c0-1.3-.5-2-1.6-2-1.2 0-1.8.8-1.8 2.1V19h-2.6z" fill="#fff"/></symbol>
-  </defs>
-</svg>
 
 <div class="report">
   <div class="wrap">
 
-    <!-- DEBUT EN-TETE -->
     <div class="masthead">
       <span class="eyebrow">Rapport hebdo · Réseaux sociaux</span>
-      <h1>Ce qui a changé sur les réseaux, semaine du JJ au JJ MOIS AAAA</h1>
+      <h1>Ce qui a changé sur les réseaux, semaine du 25 au 31 août 2026</h1>
       <div class="masthead-meta">
-        <span>Liste des plateformes couvertes cette semaine</span>
-        <span class="range">JJ—JJ.MM.AAAA</span>
+        <span>Meta · Instagram · TikTok · LinkedIn · Législation · Entreprises</span>
+        <span class="range">25—31.08.2026</span>
       </div>
       <p class="lede">Tour d'horizon sourcé de la semaine — chaque information est reliée à sa source pour vérification. Les sujets déjà couverts la semaine passée ne sont repris ici que s'il y a du nouveau.</p>
     </div>
-    <!-- FIN EN-TETE -->
 
-    <!-- DEBUT TOP 3 : trois cartes. La .stat-num est optionnelle, a utiliser
-         quand un chiffre resume la news (montant, nombre de vues, seuil). -->
     <div class="top3">
       <div class="card">
-        <span class="rank"><span class="mark mark-meta"><svg class="mark-svg"><use href="#ico-meta"/></svg></span>01 — Meta</span>
-        <div class="stat-num">CHIFFRE</div>
-        <div class="stat-cap">légende du chiffre</div>
-        <h3>Titre de la news</h3>
-        <p>Résumé en deux ou trois phrases, avec la date de l'événement.</p>
-        <a class="src" href="URL" target="_blank" rel="noopener">→ Nom de la source</a>
+        <span class="rank"><span class="mark"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIiB3aWR0aD0iMjg3LjU2IiBoZWlnaHQ9IjE5MSI+DQo8ZGVzYz5Mb2dvIG9mIE1ldGEgUGxhdGZvcm1zIC0tIEdyYXBoaWMgY3JlYXRlZCBieSBEZXRtYXIgT3dlbjwvZGVzYz4NCjxkZWZzPg0KPGxpbmVhckdyYWRpZW50IGlkPSJHcmFkX0xvZ28xIiB4MT0iNjEiIHkxPSIxMTciIHgyPSIyNTkiIHkyPSIxMjciIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4NCjxzdG9wIHN0eWxlPSJzdG9wLWNvbG9yOiMwMDY0ZTEiIG9mZnNldD0iMCIvPg0KPHN0b3Agc3R5bGU9InN0b3AtY29sb3I6IzAwNjRlMSIgb2Zmc2V0PSIwLjQiLz4NCjxzdG9wIHN0eWxlPSJzdG9wLWNvbG9yOiMwMDczZWUiIG9mZnNldD0iMC44MyIvPg0KPHN0b3Agc3R5bGU9InN0b3AtY29sb3I6IzAwODJmYiIgb2Zmc2V0PSIxIi8+DQo8L2xpbmVhckdyYWRpZW50Pg0KPGxpbmVhckdyYWRpZW50IGlkPSJHcmFkX0xvZ28yIiB4MT0iNDUiIHkxPSIxMzkiIHgyPSI0NSIgeTI9IjY2IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+DQo8c3RvcCBzdHlsZT0ic3RvcC1jb2xvcjojMDA4MmZiIiBvZmZzZXQ9IjAiLz4NCjxzdG9wIHN0eWxlPSJzdG9wLWNvbG9yOiMwMDY0ZTAiIG9mZnNldD0iMSIvPg0KPC9saW5lYXJHcmFkaWVudD4NCjwvZGVmcz4NCjxwYXRoIGlkPSJMb2dvMCIgc3R5bGU9ImZpbGw6IzAwODFmYiIgZD0ibTMxLjA2LDEyNS45NmMwLDEwLjk4IDIuNDEsMTkuNDEgNS41NiwyNC41MSA0LjEzLDYuNjggMTAuMjksOS41MSAxNi41Nyw5LjUxIDguMSwwIDE1LjUxLTIuMDEgMjkuNzktMjEuNzYgMTEuNDQtMTUuODMgMjQuOTItMzguMDUgMzMuOTktNTEuOThsMTUuMzYtMjMuNmMxMC42Ny0xNi4zOSAyMy4wMi0zNC42MSAzNy4xOC00Ni45NiAxMS41Ni0xMC4wOCAyNC4wMy0xNS42OCAzNi41OC0xNS42OCAyMS4wNywwIDQxLjE0LDEyLjIxIDU2LjUsMzUuMTEgMTYuODEsMjUuMDggMjQuOTcsNTYuNjcgMjQuOTcsODkuMjcgMCwxOS4zOC0zLjgyLDMzLjYyLTEwLjMyLDQ0Ljg3LTYuMjgsMTAuODgtMTguNTIsMjEuNzUtMzkuMTEsMjEuNzVsMC0zMS4wMmMxNy42MywwIDIyLjAzLTE2LjIgMjIuMDMtMzQuNzQgMC0yNi40Mi02LjE2LTU1Ljc0LTE5LjczLTc2LjY5LTkuNjMtMTQuODYtMjIuMTEtMjMuOTQtMzUuODQtMjMuOTQtMTQuODUsMC0yNi44LDExLjItNDAuMjMsMzEuMTctNy4xNCwxMC42MS0xNC40NywyMy41NC0yMi43LDM4LjEzbC05LjA2LDE2LjA1Yy0xOC4yLDMyLjI3LTIyLjgxLDM5LjYyLTMxLjkxLDUxLjc1LTE1Ljk1LDIxLjI0LTI5LjU3LDI5LjI5LTQ3LjUsMjkuMjktMjEuMjcsMC0zNC43Mi05LjIxLTQzLjA1LTIzLjA5LTYuOC0xMS4zMS0xMC4xNC0yNi4xNS0xMC4xNC00My4wNnoiLz4NCjxwYXRoIGlkPSJMb2dvMSIgc3R5bGU9ImZpbGw6dXJsKCNHcmFkX0xvZ28xKSIgZD0ibTI0LjQ5LDM3LjNjMTQuMjQtMjEuOTUgMzQuNzktMzcuMyA1OC4zNi0zNy4zIDEzLjY1LDAgMjcuMjIsNC4wNCA0MS4zOSwxNS42MSAxNS41LDEyLjY1IDMyLjAyLDMzLjQ4IDUyLjYzLDY3LjgxbDcuMzksMTIuMzJjMTcuODQsMjkuNzIgMjcuOTksNDUuMDEgMzMuOTMsNTIuMjIgNy42NCw5LjI2IDEyLjk5LDEyLjAyIDE5Ljk0LDEyLjAyIDE3LjYzLDAgMjIuMDMtMTYuMiAyMi4wMy0zNC43NGwyNy40LS44NmMwLDE5LjM4LTMuODIsMzMuNjItMTAuMzIsNDQuODctNi4yOCwxMC44OC0xOC41MiwyMS43NS0zOS4xMSwyMS43NS0xMi44LDAtMjQuMTQtMi43OC0zNi42OC0xNC42MS05LjY0LTkuMDgtMjAuOTEtMjUuMjEtMjkuNTgtMzkuNzFsLTI1Ljc5LTQzLjA4Yy0xMi45NC0yMS42Mi0yNC44MS0zNy43NC0zMS42OC00NS4wNC03LjM5LTcuODUtMTYuODktMTcuMzMtMzIuMDUtMTcuMzMtMTIuMjcsMC0yMi42OSw4LjYxLTMxLjQxLDIxLjc4eiIvPg0KPHBhdGggaWQ9IkxvZ28yIiBzdHlsZT0iZmlsbDp1cmwoI0dyYWRfTG9nbzIpIiBkPSJtODIuMzUsMzEuMjNjLTEyLjI3LDAtMjIuNjksOC42MS0zMS40MSwyMS43OC0xMi4zMywxOC42MS0xOS44OCw0Ni4zMy0xOS44OCw3Mi45NSAwLDEwLjk4IDIuNDEsMTkuNDEgNS41NiwyNC41MWwtMjYuNDgsMTcuNDRjLTYuOC0xMS4zMS0xMC4xNC0yNi4xNS0xMC4xNC00My4wNiAwLTMwLjc1IDguNDQtNjIuOCAyNC40OS04Ny41NSAxNC4yNC0yMS45NSAzNC43OS0zNy4zIDU4LjM2LTM3LjN6Ii8+DQo8L3N2Zz4=" alt="Meta"></span>01 — Meta</span>
+        <div class="stat-num">18 Md$</div>
+        <div class="stat-cap">accord sur 10 ans avec 48 États et territoires</div>
+        <h3>Le procès pour addiction des enfants se solde par un accord</h3>
+        <p>Le 26 août, Meta a accepté de verser jusqu'à 18 milliards $ pour clore le procès fédéral ouvert le 18 août à Oakland — sans reconnaître de faute. En échange : limite de 2h/jour par défaut pour les moins de 18 ans, couvre-feu minuit-6h, likes masqués, vérification d'âge renforcée.</p>
+        <a class="src" href="https://www.pbs.org/newshour/nation/with-time-limits-and-stronger-age-checks-metas-new-rules-for-kids-go-further-critics-say-its-not-enough" target="_blank" rel="noopener">→ PBS News</a>
       </div>
       <div class="card">
-        <span class="rank"><span class="mark mark-tiktok"><svg class="mark-svg"><use href="#ico-tiktok"/></svg></span>02 — TikTok</span>
-        <h3>Titre de la news</h3>
-        <p>Résumé en deux ou trois phrases, avec la date de l'événement.</p>
-        <a class="src" href="URL" target="_blank" rel="noopener">→ Nom de la source</a>
+        <span class="rank"><span class="mark"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHZpZXdCb3g9IjAgMCA5NiA5NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2IiByeD0iMjEiIGZpbGw9ImJsYWNrIiBzdHlsZT0iZmlsbDpibGFjaztmaWxsLW9wYWNpdHk6MTsiLz4KPHBhdGggZD0iTTczLjMxIDI1Ljc0NTZDNzIuNzg1IDI1LjQ3NDMgNzIuMjc0IDI1LjE3NjkgNzEuNzc4OCAyNC44NTQ1QzcwLjMzODkgMjMuOTAyNSA2OS4wMTg2IDIyLjc4MDggNjcuODQ2NSAyMS41MTM1QzY0LjkxMzkgMTguMTU4IDYzLjgxODYgMTQuNzUzOCA2My40MTUxIDEyLjM3MDVINjMuNDMxM0M2My4wOTQzIDEwLjM5MjEgNjMuMjMzNyA5LjExMjE0IDYzLjI1NDcgOS4xMTIxNEg0OS44OTc0VjYwLjc2MjRDNDkuODk3NCA2MS40NTU4IDQ5Ljg5NzQgNjIuMTQxMiA0OS44NjgyIDYyLjgxODVDNDkuODY4MiA2Mi45MDI3IDQ5Ljg2MDEgNjIuOTgwNSA0OS44NTUzIDYzLjA3MTJDNDkuODU1MyA2My4xMDg1IDQ5Ljg1NTMgNjMuMTQ3NCA0OS44NDcyIDYzLjE4NjNDNDkuODQ3MiA2My4xOTYgNDkuODQ3MiA2My4yMDU3IDQ5Ljg0NzIgNjMuMjE1NEM0OS43MDY0IDY1LjA2ODYgNDkuMTEyMyA2Ni44NTg4IDQ4LjExNzMgNjguNDI4NkM0Ny4xMjIyIDY5Ljk5ODMgNDUuNzU2NiA3MS4yOTk0IDQ0LjE0MDcgNzIuMjE3NUM0Mi40NTY1IDczLjE3NTcgNDAuNTUxNyA3My42NzgyIDM4LjYxNCA3My42NzU3QzMyLjM5MDYgNzMuNjc1NyAyNy4zNDY4IDY4LjYwMTEgMjcuMzQ2OCA2Mi4zMzRDMjcuMzQ2OCA1Ni4wNjY5IDMyLjM5MDYgNTAuOTkyMyAzOC42MTQgNTAuOTkyM0MzOS43OTIxIDUwLjk5MTIgNDAuOTYyOSA1MS4xNzY2IDQyLjA4MyA1MS41NDE1TDQyLjA5OTIgMzcuOTQxMkMzOC42OTg5IDM3LjUwMiAzNS4yNDQ0IDM3Ljc3MjIgMzEuOTUzOCAzOC43MzQ4QzI4LjY2MzEgMzkuNjk3NSAyNS42MDc3IDQxLjMzMTcgMjIuOTgwMiA0My41MzQzQzIwLjY3OCA0NS41MzQ2IDE4Ljc0MjUgNDcuOTIxNCAxNy4yNjA4IDUwLjU4NzJDMTYuNjk2OSA1MS41NTk0IDE0LjU2OTUgNTUuNDY1OCAxNC4zMTE5IDYxLjgwNThDMTQuMTQ5OSA2NS40MDQ0IDE1LjIzMDYgNjkuMTMyNiAxNS43NDU4IDcwLjY3MzRWNzAuNzA1OEMxNi4wNjk5IDcxLjYxMzIgMTcuMzI1NiA3NC43MDk0IDE5LjM3MiA3Ny4zMTk3QzIxLjAyMjEgNzkuNDEzNSAyMi45NzE2IDgxLjI1MjcgMjUuMTU3OSA4Mi43NzgzVjgyLjc0NTlMMjUuMTkwMyA4Mi43NzgzQzMxLjY1NjcgODcuMTcyNCAzOC44MjYzIDg2Ljg4NCAzOC44MjYzIDg2Ljg4NEM0MC4wNjc0IDg2LjgzMzggNDQuMjI0OSA4Ni44ODQgNDguOTQ2MyA4NC42NDY0QzU0LjE4MyA4Mi4xNjU4IDU3LjE2NDIgNzguNDcgNTcuMTY0MiA3OC40N0M1OS4wNjg4IDc2LjI2MTggNjAuNTgzMiA3My43NDUyIDYxLjY0MjYgNzEuMDI4MkM2Mi44NTEzIDY3Ljg1MDkgNjMuMjU0NyA2NC4wNDAxIDYzLjI1NDcgNjIuNTE3MVYzNS4xMTU1QzYzLjQxNjggMzUuMjEyNyA2NS41NzQ5IDM2LjY0MDEgNjUuNTc0OSAzNi42NDAxQzY1LjU3NDkgMzYuNjQwMSA2OC42ODQyIDM4LjYzMyA3My41MzUyIDM5LjkzMDlDNzcuMDE1NSA0MC44NTQ0IDgxLjcwNDUgNDEuMDQ4OCA4MS43MDQ1IDQxLjA0ODhWMjcuNzg4N0M4MC4wNjE1IDI3Ljk2NjkgNzYuNzI1NSAyNy40NDg1IDczLjMxIDI1Ljc0NTZaIiBmaWxsPSJ3aGl0ZSIgc3R5bGU9ImZpbGw6d2hpdGU7ZmlsbC1vcGFjaXR5OjE7Ii8+Cjwvc3ZnPgo=" alt="TikTok"></span>02 — TikTok</span>
+        <div class="stat-num">30 M$</div>
+        <div class="stat-cap">amende infligée par le régulateur brésilien</div>
+        <h3>Le Brésil sanctionne ByteDance pour les données d'enfants</h3>
+        <p>L'autorité brésilienne de protection des données a infligé le 25 août plus de 153 millions de reais (~30 M$) à ByteDance : jusqu'à 8 millions de comptes de mineurs auraient été traités sans base légale valable. TikTok a 10 jours pour faire appel.</p>
+        <a class="src" href="https://abcnews.com/Technology/wireStory/brazilian-data-protection-regulator-fines-tiktoks-owner-30-135938304" target="_blank" rel="noopener">→ ABC News</a>
       </div>
       <div class="card">
-        <span class="rank"><span class="mark mark-youtube"><svg class="mark-svg"><use href="#ico-youtube"/></svg></span>03 — YouTube</span>
-        <h3>Titre de la news</h3>
-        <p>Résumé en deux ou trois phrases, avec la date de l'événement.</p>
-        <a class="src" href="URL" target="_blank" rel="noopener">→ Nom de la source</a>
+        <span class="rank">03 — Réglementation</span>
+        <h3>La Nouvelle-Zélande propose d'interdire les réseaux sociaux aux moins de 16 ans</h3>
+        <p>Un projet de loi déposé le 24 août obligerait Instagram, Facebook, TikTok, Snapchat, YouTube et X à vérifier l'âge de leurs utilisateurs, sous peine d'amendes pouvant atteindre 10% du chiffre d'affaires mondial. Ne devrait pas être examiné avant les élections du 7 novembre.</p>
+        <a class="src" href="https://www.rnz.co.nz/news/politics/1103002/govt-pushes-ahead-with-social-media-ban-for-under-16s" target="_blank" rel="noopener">→ RNZ</a>
       </div>
     </div>
-    <!-- FIN TOP 3 -->
-
-    <!-- DEBUT SECTIONS : garder les 5 sections dans cet ordre.
-         Modele d'un item (le badge "Mise a jour" va DANS .body, avant le <h4>) :
-
-         <div class="item">
-           <span class="platform"><span class="mark mark-SLUG"><svg class="mark-svg"><use href="#ico-SLUG"/></svg></span>NOM</span>
-           <div class="body">
-             <span class="update-tag">Mise à jour</span>
-             <h4>Titre</h4>
-             <p>Texte, avec date explicite si l'info depasse 7 jours.</p>
-             <a class="src" href="URL" target="_blank" rel="noopener">→ Source</a>
-           </div>
-         </div>
-
-         Si une section n'a rien de neuf, mettre un .callout qui le dit clairement. -->
-
-    <section>
-      <div class="section-head"><span class="eyebrow">01</span><h2>Nouvelles fonctionnalités</h2><span class="rule"></span></div>
-      <div class="callout"><strong>Rien de neuf cette semaine.</strong></div>
-    </section>
-
-    <section>
-      <div class="section-head"><span class="eyebrow">02</span><h2>Changements d'algorithme</h2><span class="rule"></span></div>
-      <div class="callout"><strong>Rien de neuf cette semaine.</strong></div>
-    </section>
-
-    <section>
-      <div class="section-head"><span class="eyebrow">03</span><h2>Législation &amp; réglementation</h2><span class="rule"></span></div>
-      <div class="callout"><strong>Rien de neuf cette semaine.</strong></div>
-    </section>
-
-    <section>
-      <div class="section-head"><span class="eyebrow">04</span><h2>Actualité des entreprises</h2><span class="rule"></span></div>
-      <div class="callout"><strong>Rien de neuf cette semaine.</strong></div>
-    </section>
-
-    <section style="margin-bottom:8px;">
-      <div class="section-head"><span class="eyebrow">05</span><h2>Tendances &amp; viralité</h2><span class="rule"></span></div>
-      <div class="callout"><strong>Rien de neuf cette semaine.</strong></div>
-    </section>
-    <!-- FIN SECTIONS -->
-
-    <!-- DEBUT PIED DE PAGE -->
-    <footer>
-      <span>Généré le JJ.MM.AAAA · sources lues intégralement et datées</span>
-      <span>Prochain rapport : lundi JJ.MM.AAAA</span>
-    </footer>
-    <!-- FIN PIED DE PAGE -->
-
-  </div>
-</div>
